@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
@@ -11,7 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts Inter & Orbitron -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
-    
+    <!-- html2canvas para generación de captura visual -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -94,6 +95,7 @@
 </head>
 <body class="min-h-screen flex flex-col font-sans antialiased pb-12">
 
+    <!-- Header -->
     <header class="sticky top-0 z-50 bg-brand-darkBg/90 backdrop-blur-md border-b border-brand-cardBorder px-4 py-3">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
@@ -120,6 +122,7 @@
 
     <main class="max-w-4xl mx-auto px-4 pt-6 space-y-10 flex-grow w-full">
 
+        <!-- Banner Promocional -->
         <section class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-brand-cardBg via-brand-darkBg to-brand-cardBg border border-brand-cardBorder p-6 md:p-8 shadow-2xl">
             <div class="absolute top-0 right-0 -mt-8 -mr-8 w-48 h-48 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -150,6 +153,7 @@
             </div>
         </section>
 
+        <!-- Sección Diamantes Infinitos -->
         <section id="diamantes" class="space-y-4">
             <div class="flex items-center gap-2 border-b border-brand-cardBorder pb-2">
                 <i class="fa-solid fa-gem text-brand-blue text-2xl"></i>
@@ -159,12 +163,9 @@
             </div>
 
             <div class="grid gap-3" id="diamantes-list">
-                
                 <div onclick="selectProduct('DIAMANTES INFINITOS', '100 Diamantes + 10 Bono', 1290, this)" class="product-card cursor-pointer bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-brand-blue neon-border-blue">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl">
-                            
-                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl"></div>
                         <div>
                             <h3 class="font-bold text-white text-base">100 Diamantes <span class="text-xs bg-brand-purple/40 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">+10 Bono</span></h3>
                             <p class="text-xs text-gray-400">Recarga directa por ID</p>
@@ -178,9 +179,7 @@
 
                 <div onclick="selectProduct('DIAMANTES INFINITOS', '310 Diamantes + 31 Bono', 3770, this)" class="product-card cursor-pointer bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-brand-blue neon-border-blue">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl">
-                            
-                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl"></div>
                         <div>
                             <h3 class="font-bold text-white text-base">310 Diamantes <span class="text-xs bg-brand-purple/40 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">+31 Bono</span></h3>
                             <p class="text-xs text-gray-400">Recarga directa por ID</p>
@@ -194,9 +193,7 @@
 
                 <div onclick="selectProduct('DIAMANTES INFINITOS', '520 Diamantes + 52 Bono', 6200, this)" class="product-card cursor-pointer bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-brand-blue neon-border-blue">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl">
-                            
-                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl"></div>
                         <div>
                             <h3 class="font-bold text-white text-base">520 Diamantes <span class="text-xs bg-brand-purple/40 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">+52 Bono</span></h3>
                             <p class="text-xs text-gray-400">Recarga directa por ID</p>
@@ -210,9 +207,7 @@
 
                 <div onclick="selectProduct('DIAMANTES INFINITOS', '1060 Diamantes + 106 Bono', 11210, this)" class="product-card cursor-pointer bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-brand-blue neon-border-blue">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl">
-                            
-                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl"></div>
                         <div>
                             <h3 class="font-bold text-white text-base">1060 Diamantes <span class="text-xs bg-brand-purple/40 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">+106 Bono</span></h3>
                             <p class="text-xs text-gray-400">Recarga directa por ID</p>
@@ -226,9 +221,7 @@
 
                 <div onclick="selectProduct('DIAMANTES INFINITOS', '2160 Diamantes + 218 Bono', 23000, this)" class="product-card cursor-pointer bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-brand-blue neon-border-blue">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl">
-                            
-                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-950/60 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl"></div>
                         <div>
                             <h3 class="font-bold text-white text-base">2160 Diamantes <span class="text-xs bg-brand-purple/40 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">+218 Bono</span></h3>
                             <p class="text-xs text-gray-400">Recarga directa por ID</p>
@@ -242,79 +235,8 @@
 
                 <div onclick="selectProduct('DIAMANTES INFINITOS', '5600 Diamantes + 560 Bono', 55400, this)" class="product-card cursor-pointer bg-brand-cardBg border border-amber-500/40 rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-amber-400 shadow-lg shadow-amber-500/10">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-amber-950/60 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl">
-                            
-                        </div>
+                        <div class="w-12 h-12 rounded-lg bg-amber-950/60 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl"></div>
                         <div>
                             <div class="flex items-center gap-2">
-                                <h3 class="font-bold text-white text-base">5600 Diamantes</h3>
-                                <span class="text-[10px] bg-amber-500 text-black font-extrabold px-1.5 py-0.5 rounded">POPULAR</span>
-                            </div>
-                            <p class="text-xs text-amber-300/80">+560 Bono Extra</p>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <span class="font-black text-lg text-amber-400 font-gamer">$55.400</span>
-                        <p class="text-[10px] text-amber-300 font-semibold">Tocar para Elegir</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="pases" class="space-y-4">
-            <div class="flex items-center gap-2 border-b border-brand-cardBorder pb-2">
-                <i class="fa-solid fa-ticket text-brand-purple text-2xl"></i>
-                <h2 class="font-gamer font-bold text-xl md:text-2xl text-white tracking-wide">
-                    PASES Y FRAGMENTOS
-                </h2>
-            </div>
-
-            <div class="grid gap-3" id="pases-list">
-                
-                <div onclick="selectProduct('PASES Y FRAGMENTOS', 'Pase Booyah / Pases', 1900, this)" class="product-card cursor-pointer bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex items-center justify-between transition-all duration-300 hover:border-brand-purple neon-border-purple">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-purple-950/60 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl">
-                            
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-white text-base">Pase Booyah / Pases</h3>
-                            <p class="text-xs text-gray-400">Activación directa</p>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <span class="font-black text-lg text-emerald-400 font-gamer">$1.900</span>
-                        <p class="text-[10px] text-brand-purple font-semibold">Tocar para Elegir</p>
-                    </div>
-                </div>
-
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-300 hover:border-brand-purple neon-border-purple">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-purple-950/60 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl">
-                            
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-white text-base">Fragmentos</h3>
-                            <p class="text-xs text-gray-400">Precio unitario: <span class="text-emerald-400 font-semibold">$90 c/u</span></p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between md:justify-end gap-4 border-t md:border-t-0 pt-3 md:pt-0 border-brand-cardBorder">
-                        <div class="flex items-center border border-brand-cardBorder rounded-lg bg-brand-darkBg">
-                            <button onclick="updateQuantity('fragQty', -1)" class="px-3 py-1 text-gray-300 hover:text-white font-bold text-lg">-</button>
-                            <input id="fragQty" type="number" value="1" min="1" readonly class="w-12 text-center bg-transparent text-white font-bold text-sm focus:outline-none">
-                            <button onclick="updateQuantity('fragQty', 1)" class="px-3 py-1 text-gray-300 hover:text-white font-bold text-lg">+</button>
-                        </div>
-                        <button onclick="selectCustomQuantityProduct('PASES Y FRAGMENTOS', 'Fragmentos', 90, 'fragQty', this)" class="bg-brand-purple/30 hover:bg-brand-purple text-purple-200 border border-brand-purple/50 px-4 py-2 rounded-lg text-xs font-bold transition">
-                            Seleccionar
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-brand-cardBg border border-brand-cardBorder rounded-xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-300 hover:border-brand-purple neon-border-purple">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-lg bg-purple-950/60 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl">
-                            
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-white
+                                <h
+                                
